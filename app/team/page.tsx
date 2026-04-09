@@ -18,6 +18,7 @@ const Team = () => {
     }
   ];
 
+  // Advisory board
   const advisoryBoard = [
     {
       image: "/teams/robert.jpeg",
