@@ -6,7 +6,6 @@ export type TeamMember = {
   role: string;
   description: string;
   linkedin?: string;
-  email?: string;
 };
 
 interface TeamCardProps {
@@ -66,7 +65,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
           </a>
         )}
 
-        {member.email && (
+        {/* {member.email && (
           <a
             href={`mailto:${member.email}`}
             className="w-6 h-6 hover:opacity-60 transition"
@@ -74,7 +73,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
           >
             <img src="/gmail-icon.svg" className="w-6 h-6" />
           </a>
-        )}
+        )} */}
       </div>
     </div>
   );
