@@ -7,6 +7,54 @@ export interface TimelineEvent {
 
 export const timelineData: TimelineEvent[] = [
   {
+    title: "Valletta, Malta",
+    dates: "30 Sep - 2 Oct 2026",
+    description: (
+      <>
+        Quant Insider Fintech Partner for &quot;The 22nd Quantitative Finance Conference&quot;{" "}
+        <a href="https://www.wbstraining.com/events/qfc/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline">
+          Visit Now
+        </a>
+      </>
+    ),
+    images: [
+      "./eventsection/22nd-Quantitative/img01.png",
+      "./eventsection/22nd-Quantitative/img02.png"
+    ]
+  },
+  {
+    title: "New York City",
+    dates: "21 May 2026",
+    description: (
+      <>
+        Quant Insider Fintech Partner for &quot;The 4th Women in Quantitative Finance Americas Conference (WQFA)&quot;{" "}
+        <a href="https://www.wbstraining.com/events/wqfa/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline">
+          Visit Now
+        </a>
+      </>
+    ),
+    images: [
+      "./eventsection/4th-women/img01.png",
+      "./eventsection/4th-women/img02.png"
+    ]
+  },
+  {
+    title: "London",
+    dates: "30 Apr 2026",
+    description: (
+      <>
+        Quant Insider Fintech Partner for &quot;The 9th Women in Quantitative Finance Conference (WQF)&quot;{" "}
+        <a href="https://www.wbstraining.com/events/london-wqf-conference/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline">
+          Visit Now
+        </a>
+      </>
+    ),
+    images: [
+      "./eventsection/9th-women/img01.png",
+      "./eventsection/9th-women/img02.png"
+    ]
+  },
+  {
     title: "Quant Strats",
     dates: "14 - 15 Oct 2025",
     description: (

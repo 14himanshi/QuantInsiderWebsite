@@ -30,12 +30,25 @@ const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
         {member.role}
       </p>
 
-      <h3
-        className="text-xl font-bold text-gray-900 text-center mb-1 line-clamp-2 wrap-break-word"
-        title={member.name}
-      >
-        {member.name}
-      </h3>
+      <div className="flex justify-center items-center gap-2 mb-1 w-full min-w-0">
+        <h3
+          className="text-xl font-bold text-gray-900 text-center line-clamp-2 wrap-break-word min-w-0"
+          title={member.name}
+        >
+          {member.name}
+        </h3>
+        {member.linkedin && (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 w-7 h-7 hover:opacity-60 transition"
+            aria-label={`${member.name} LinkedIn`}
+          >
+            <img src="/linkedin-app-icon.svg" className="w-7 h-7" alt="" />
+          </a>
+        )}
+      </div>
 
       <div className="w-10 h-[2px] bg-gray-300 mx-auto mb-2 rounded-full shrink-0" />
 
@@ -46,20 +59,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
         >
           {member.description}
         </p>
-      </div>
-
-      <div className="flex justify-end items-center shrink-0 pt-3 mt-auto">
-        {member.linkedin && (
-          <a
-            href={member.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-7 h-7 hover:opacity-60 transition"
-            aria-label={`${member.name} LinkedIn`}
-          >
-            <img src="/linkedin-app-icon.svg" className="w-7 h-7" alt="" />
-          </a>
-        )}
       </div>
     </div>
   );
