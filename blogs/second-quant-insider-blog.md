@@ -3,7 +3,7 @@ title: "The Dirty Secret of Hyperparameters: They’re All Trading Opinions"
 excerpt: "This article explains that hyperparameters in trading systems are actually risk decisions that define how a strategy reacts to market changes and failures."
 date: "2026-04-17"
 author: "Quant Insider Research Desk"
-coverImage: "/article2_hero.png"
+//coverImage: "/article2_hero.jpg"
 tags:
   - Quant Research
   - Strategy Design
