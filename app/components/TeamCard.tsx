@@ -1,30 +1,64 @@
-import React from 'react';
+import React from "react";
 
-interface TeamCardProps {
+export type TeamMember = {
   image: string;
   name: string;
   role: string;
   description: string;
-  imageSize?: 'full' | 'small';
+  linkedin?: string;
+};
+
+interface TeamCardProps {
+  member: TeamMember;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ image, name, role, description, imageSize = 'full' }) => {
+const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
   return (
-    <div className="team-card w-full h-full transform transition duration-300 hover:shadow-lg">
-      <div className="card-content h-full flex flex-col relative bg-white/40 backdrop-blur-md rounded-xl shadow-sm border border-gray-200/50 overflow-hidden hover:border-gray-300/50 transition-colors">
-        <div className="overflow-hidden aspect-square flex items-center justify-center bg-transparent">
-          <img
-            src={image}
-            alt={name}
-            className={`${imageSize === 'small' ? 'w-3/4 h-3/4 rounded-full shadow-md' : 'w-full h-full'} object-cover object-center transition-transform duration-500 hover:scale-105`}
-          />
-        </div>
-        <div className="p-5 text-center flex-grow flex flex-col">
-          <h2 className="card-title text-xl font-bold text-gray-900 mb-1">{name}</h2>
-          <h3 className="card-role text-sm font-medium text-gray-600 mb-3 uppercase tracking-wide">{role}</h3>
-          <div className="w-12 h-0.5 bg-gray-400/30 mx-auto mb-4 rounded-full"></div>
-          <p className="card-description text-gray-800 text-sm leading-relaxed whitespace-pre-line font-light flex-grow">{description}</p>
-        </div>
+    <div className="h-full w-full bg-white rounded-xl p-5 shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
+      <div className="flex justify-center shrink-0">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="mb-3 w-full h-80 object-cover rounded-lg shadow-md"
+        />
+      </div>
+
+      <p
+        className="text-sm font-semibold uppercase text-red-900 text-center mb-0.5 line-clamp-2 wrap-break-word"
+        title={member.role}
+      >
+        {member.role}
+      </p>
+
+      <div className="flex justify-center items-center gap-2 mb-1 w-full min-w-0">
+        <h3
+          className="text-xl font-bold text-gray-900 text-center line-clamp-2 wrap-break-word min-w-0"
+          title={member.name}
+        >
+          {member.name}
+        </h3>
+        {member.linkedin && (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 w-7 h-7 hover:opacity-60 transition"
+            aria-label={`${member.name} LinkedIn`}
+          >
+            <img src="/linkedin-app-icon.svg" className="w-7 h-7" alt="" />
+          </a>
+        )}
+      </div>
+
+      <div className="w-10 h-[2px] bg-gray-300 mx-auto mb-2 rounded-full shrink-0" />
+
+      <div className="flex-1 min-h-0 text-gray-600 text-sm text-center leading-relaxed">
+        <p
+          className="line-clamp-8 wrap-break-word"
+          title={member.description}
+        >
+          {member.description}
+        </p>
       </div>
     </div>
   );

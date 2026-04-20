@@ -1,7 +1,15 @@
 import { MetadataRoute } from 'next'
+import { getAllBlogs } from './lib/blogs'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://quantinsider.io'
+  const blogs = await getAllBlogs()
+  const blogEntries: MetadataRoute.Sitemap = blogs.map((blog) => ({
+    url: `${baseUrl}/blogs/${blog.slug}`,
+    lastModified: new Date(blog.date),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
   
   return [
     {
@@ -52,6 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/blogs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...blogEntries,
   ]
 }
 

@@ -7,26 +7,16 @@ import React from 'react';
 const Education = () => {
   const interview = [
     {
-      path: "/education/interview/prep1.png",
-      title: "Quant Insider Stack",
-      description: "Quant Insider Stack is Bundle of Interview Byte, and Quant Insider Project Handbook along with Bonus Resources.In Total You will get Access to 15 Projects covering broad range of Topics in Quant Finance, making your Project Portfolio Robust for different Quant Roles.",
-      link: "https://topmate.io/quant_insider/612748"
-    }, {
       path: "/education/interview/prep2.jpg",
       title: "Mock Interview",
       description: "Real Interview Simulation. Under Pressure Brilliance. Our sessions include a 50-minute mock interview where we simulate real interview conditions, followed by 10 minutes of reflection. Together, we'll evaluate how you performed and come up with actionable insights to take your game to next level.",
       link: "https://topmate.io/quant_insider/601274"
     }, {
-      path: "/education/interview/prep4.png",
-      title: "Quant Insider Project Handbook",
-      description: "The Quant Insider Project Handbook 21 Projects divided into 2 Sections.Section 1- 10 industry oriented projects based on challenges and competitions conducted by Top HFT's and Hedge Funds. Section 2 - Derivative Pricing Models, Hedging and Volatility Modelling, Statistical Arbitrage",
-      link: "https://topmate.io/quant_insider/612675"
-    }, {
-      path: "/education/interview/prep3.png",
-      title: "Interview Byte",
-      description: " we are introducing Interview Byte which covers Quant interview questions on all the important topics.Books containing 200+ Mathematical and logical Puzzles. (Probability, Markov chain, Algorithms, Game Theory, Random Process, Topology, Geometry and Dice problems)",
-      link: "https://topmate.io/quant_insider/612577"
-    },
+      path: "/education/other/4.png",
+      title: "Buy Side Mock Interview",
+      description: "We offer a buy-side mock interview service to help you prepare for your interview with a buy-side firm. We will simulate a real interview experience, including a 50-minute mock interview and 10 minutes of reflection. We will then provide you with feedback on your performance and help you improve your chances of success.",
+      link: "https://topmate.io/quant_insider/1998365"
+    }
   ];
 
   const partnership = [
@@ -88,11 +78,6 @@ const Education = () => {
       title: "1:1 Consultation",
       description: "Connect 1:1 with us over a video call to discuss anything you want to related to preparation for Quant profiles. Get your Queries Addressed. Personalized career growth plan, resources",
       link: "https://topmate.io/quant_insider/587766"
-    }, {
-      path: "/education/other/4.png",
-      title: "Long term Mentorship",
-      description: "One Career Catalyst session. \n 1-1 Consultation sessions. \n One CV Review/Writing. \n Two mock interviews. ",
-      link: "https://topmate.io/quant_insider/623359"
     }
   ];
 
@@ -104,7 +89,7 @@ const Education = () => {
           className="text-center text-2xl font-extrabold tracking-tighter text-black md:text-7xl font-serif"
           text="Quant Interview Preparation"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2 sm:mt-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto gap-4 mt-2 sm:mt-5">
           {interview.map((card, index) => (
             <div key={index} className="flex">
               <Card
@@ -164,7 +149,7 @@ const Education = () => {
           className="text-center text-2xl font-extrabold tracking-tighter text-black md:text-7xl font-serif"
           text="Quant Career Services & Mentorship"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2 sm:mt-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 sm:mt-5">
           {otherPackages.map((card, index) => (
             <div key={index} className="flex">
               <Card

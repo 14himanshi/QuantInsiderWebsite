@@ -69,6 +69,9 @@ const Header = () => {
                             <Link href="/talks" className="hover:text-indigo-600 hover:font-bold hover:underline transition-colors">
                                 <span>Talks</span>
                             </Link>
+                            <Link href="/blogs" className="hover:text-indigo-600 hover:font-bold hover:underline transition-colors">
+                                <span>Blogs</span>
+                            </Link>
                             <Link href="/team" className="hover:text-indigo-600 hover:font-bold hover:underline transition-colors">
                                 <span>Team</span>
                             </Link>
@@ -124,6 +127,7 @@ const Header = () => {
                             <Link href="/enterprise" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">Enterprise</Link>
                             <Link href="/events" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">Events</Link>
                             <Link href="/talks" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">Talks</Link>
+                            <Link href="/blogs" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">Blogs</Link>
                             <Link href="/team" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">Team</Link>
                             <Link href="/hiring" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">Hiring Services</Link>
                             <Link href="/about" onClick={toggleMenu} className="hover:text-indigo-600 transition-colors">About</Link>
